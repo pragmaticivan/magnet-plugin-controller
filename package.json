@@ -1,0 +1,38 @@
+{
+  "name": "magnet-plugin-multiple",
+  "version": "0.0.1",
+  "description": "Magnet plugin for multiple route support",
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "main": "lib/index.js",
+  "jsnext:main": "src/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
+  "scripts": {
+    "build": "babel --presets es2015 -d lib/ src/",
+    "format": "prettier --single-quote --no-bracket-spacing --trailing-comma es5 --write \"{src/**/*.js}\" && eslint --fix \"{src/**/*.js}\"",
+    "lint": "eslint src/**/*.js",
+    "prepublish": "npm run build"
+  },
+  "contributors": [
+    "Ivan Santos <ivan.santos@liferay.com>"
+  ],
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wedeploy/magnet-plugin-multiple.git"
+  },
+  "dependencies": {
+    "metal": "^2.6.4"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "eslint": "^3.17.1",
+    "prettier": "^1.2.2",
+    "eslint-config-liferay": "^1.0.1"
+  }
+}
