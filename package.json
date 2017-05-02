@@ -1,6 +1,6 @@
 {
   "name": "magnet-plugin-multiple",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Magnet plugin for multiple route support",
   "engines": {
     "node": ">=7.6.0"
