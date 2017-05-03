@@ -1,7 +1,7 @@
 {
-  "name": "magnet-plugin-multiple",
+  "name": "magnet-plugin-controller",
   "version": "0.0.2",
-  "description": "Magnet plugin for multiple route support",
+  "description": "Magnet plugin for controller route support",
   "engines": {
     "node": ">=7.6.0"
   },
@@ -24,7 +24,7 @@
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wedeploy/magnet-plugin-multiple.git"
+    "url": "https://github.com/wedeploy/magnet-plugin-controller.git"
   },
   "dependencies": {
     "metal": "^2.6.4"

@@ -1,29 +1,28 @@
 import Magnet from 'magnet';
-import pluginMultiple from '../../src/index';
+import pluginController from '../../src/index';
 
-describe('pluginMultiple', () => {
+describe('pluginController', () => {
   describe('.test', () => {
-    it('should return true if module has route multiple', () => {
+    it('should return true if module has controller', () => {
       const mod = {};
-      mod.route = {multiple: true};
-      mod.default = (app, magnet) => {};
-      expect(pluginMultiple.test(mod, null, null)).to.be.true;
+      mod.controller = (app, magnet) => {};
+      expect(pluginController.test(mod, null, null)).to.be.true;
     });
 
     it('should return false if module is not function', () => {
       const mod = {};
-      mod.route = {multiple: true};
-      mod.default = 'not a function';
-      expect(pluginMultiple.test(mod, null, null)).to.be.false;
+      mod.controller = 'not a function';
+      expect(pluginController.test(mod, null, null)).to.be.false;
     });
   });
 
   describe('integration', () => {
     let magnet;
-    const directory = `${process.cwd()}/test/fixtures/multiple`;
+    const directory = `${process.cwd()}/test/fixtures/controller`;
 
     beforeEach(async () => {
       magnet = new Magnet({directory});
+      magnet.addPlugin(pluginController);
       await magnet.build();
       await magnet.start();
     });
@@ -32,7 +31,7 @@ describe('pluginMultiple', () => {
       await magnet.stop();
     });
 
-    it('should register multiple module from directory', async () => {
+    it('should register controller module from directory', async () => {
       await assertAsyncHttpRequest({
         path: '/route-one',
         responseBody: 'one',
