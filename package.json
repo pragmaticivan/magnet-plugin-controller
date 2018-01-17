@@ -1,6 +1,6 @@
 {
   "name": "magnet-plugin-controller",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "description": "Magnet plugin for controller route support",
   "engines": {
     "node": ">=8.9.0"
