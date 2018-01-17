@@ -3,7 +3,7 @@
   "version": "0.0.4",
   "description": "Magnet plugin for controller route support",
   "engines": {
-    "node": ">=7.6.0"
+    "node": ">=8.9.0"
   },
   "main": "lib/index.js",
   "jsnext:main": "src/index.js",
